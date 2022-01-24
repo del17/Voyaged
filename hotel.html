@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tours and Travels</title>
+   <style>
+    .navbar1{
+      font-family: sans-serif;
+        border-left: 10px solid rgb(207, 194, 15);
+        background-color: white;
+        overflow: hidden;
+        padding: 16px;
+    }
+       body{
+        background-repeat: no-repeat;
+        background-size: cover;
+       }
+      
+       span {
+        float: left;
+        border-right:1px solid rgb(240, 180, 17);
+      }
+      span:last-child {
+        border-right: none;
+      } 
+      
+      span a {
+        color: black;
+        font-weight: bold;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      
+      span a:hover {
+        color: rgb(241, 226, 86);
+      }
+      
+      nav.navbar1 a{
+        text-decoration: none;
+      }
+
+      div.container {
+        position: relative;
+        text-align: center;
+        opacity: 1;
+      }
+      div.centered {
+        font-family: sans-serif;
+        position: absolute;
+        top: 9%;
+        left: 17%;
+        transform: translate(-50%, -50%);
+        background-color:transparent;
+        color:white;
+        font-size: 50px;
+        margin-left: 30px;
+        text-align: left;
+      }
+      footer{
+        width: 1232px;
+        margin-left: 50px;
+        vertical-align: bottom;
+        font-family: sans-serif;
+        font-size: 17px;
+        margin-left: 0;
+        padding: 10px 10px 10px 10px;
+        margin-bottom: 10px;
+        
+        color:black;
+    }
+    #copyright{
+      
+        text-align: center;
+        color: black;
+        font-family: Century Schoolbook;
+    }
+    button{
+      background-color: transparent;
+      border-color: rgb(238, 177, 11);
+      color: brown;
+      padding: 10px 20px 10px 20px;
+      font-size: 20px;
+      border-radius: 8px;
+    } 
+    .distable { 
+        margin-top: 20px;
+        margin-left: 30px;
+        background-color:ghostwhite;
+    }
+
+    .book{
+        background-color: coral;
+        color: white;
+    }
+    td{
+        border: 1px solid #ededed;
+        border-left: none;
+        border-bottom:none;
+    }
+    ul{
+        text-align: left;
+    }
+    h1{
+        color:rgb(219, 164, 62);
+    }
+
+    h2{
+        color: rgb(238, 177, 11);
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    p{
+        color: gray;
+    }
+    hr{
+        background-color: rgb(233, 202, 64) ; 
+        width: 100%;
+         height: 2px;
+    }
+    </style>  
+    </head>
+    <body> 
+        <nav class="navbar1">
+            <span><a class="active" href="web1.html">Home</a></span>
+            <span><a href="destinations.html">Destinations</a></span>
+            <span><a href="About Us.html">About Us</a></span>
+        </nav>
+    <div class="container">
+        <img src="./img/hotel.jpg" width="1300" height="500">
+        <div class="centered">VOYAGED!
+          <br>
+          <button type="button"  ><a href="destinations.html" style="color: brown;">Explore Now!</a></button>
+
+          <!-- end of centered -->
+        </div>
+
+    <div class="distable">
+        <table class= "table">
+            <col width="300">
+            <col width="300">
+            <col width="300">
+            <col width="300">
+            <col width="300">
+            
+            <thead style="color:grey;">
+                <tr>
+                    <th>Hotel Name</th>
+                    <th>Rooms</th>
+                    <th>Facilities</th>
+                    <th>Price</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>
+                    <h2>The Leena</h2>
+                    <img src="./img/leela.jpg" alt="The leela" width="280" height="280"> 
+                    </td>
+                
+                    <td>
+                    <ul>
+                        <li>Standard King rooms</li>
+                        <li>250 square foot</li>
+                        <li>private bathroom</li>
+                        <li>free Wi-fi</li>
+                    </ul>
+                    </td>
+                
+                    <td>
+                    <ul>
+                        <li>Non refundable</li>
+                        <li>Special condition, pay when you stay</li>
+                        <li>Affordable breakfast </li>
+                        
+                    </ul>
+                </td>
+                
+                    <td>
+                    <p>Per Night</p>
+                    <h1>Rs. 5000</h1>
+                </td>
+
+                <td>
+                    <button class ="book" type="button"><a href="booking.html">Book Now!</a></button>
+                    <p>Hurry!! No booking fees or credit card fees !</p>
+                </td>
+
+                </tr>
+
+                <tr>
+                    <td>
+                    <h2>The Majestic</h2>
+                    <img src="./img/majestic.jpg" alt="The majestic" width="280" height="280"> 
+                    </td>
+                
+                    <td>
+                    <ul>
+                        <li>Standard King rooms</li>
+                        <li>280 square foot</li>
+                        <li>private bathroom</li>
+                        <li>In-built swimming pool</li>
+                        <li>Free Wi-fi</li>
+                    </ul>
+                    </td>
+                
+                    <td>
+                    <ul>
+                        <li>Refundable</li>
+                        <li>Early check-in</li>
+                        <li>Affordable course meal </li>
+                        
+                    </ul>
+                </td>
+                
+                    <td>
+                    <p>Per Night</p>
+                    <h1>Rs. 1000</h1>
+                </td>
+
+                <td>
+                    <button class ="book" type="button"><a href="booking.html">Book Now!</a></button>
+                    <p>Hurry!! No booking fees or credit card fees !</p>
+                </td>
+
+                </tr>
+
+                <tr>
+                    <td>
+                    <h2>The Superior</h2>
+                    <img src="./img/superior.jpg" alt="The superior" width="280" height="280"> 
+                    </td>
+                
+                    <td>
+                    <ul>
+                        <li>Queen size rooms</li>
+                        <li>200 square foot</li>
+                        <li>Free Wi-fi</li>
+                        <li>Free Breakfast</li>
+                        
+                    </ul>
+                    </td>
+                
+                    <td>
+                    <ul>
+                        <li>Non refundable</li>
+                        <li>Multi-cuisine Lunch</li>
+                        <li>Discount on family members</li>
+                        
+                    </ul>
+                </td>
+                
+                    <td>
+                    <p>Per Night</p>
+                    <h1>Rs. 800</h1>
+                </td>
+                <td>
+                    <button class ="book" type="button"><a href="booking.html">Book Now!</a></button>
+                    <p>Hurry!! No booking fees or credit card fees !</p>
+                </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <footer >
+        <div>
+            <center>Our website is designed to book hotels at yout favourite destionation in India. </center>
+          </div>
+        <center><hr></center>
+        <div id="copyright">
+            @Copyright 2020 by the author and developer. All rights reserved.
+        </div>
+    </footer>
+
+    </body>
+</html>

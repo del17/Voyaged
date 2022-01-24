@@ -1,0 +1,93 @@
+<?php 
+include("login.php")?>
+<html>
+    <head>
+        <title></title>
+        <style>
+            .navbar1{
+                font-family: sans-serif;
+                  border-left: 10px solid rgb(32,178,170);
+                  background-color: white;
+                  overflow: hidden;
+                  padding: 16px;
+            }
+            nav.navbar1 a{
+                text-decoration: none;
+              }
+              span {
+                float: left;
+                border-right:1px solid rgb(32,178,170);
+              }
+              span:last-child {
+                border-right: none;
+              } 
+              
+              span a {
+                color: black;
+                font-weight: bold;
+                padding: 14px 16px;
+                text-decoration: none;
+              }
+              
+              span a:hover {
+                color: rgb(32,178,170);
+              }
+              div.container {
+                position: relative;
+                text-align: center;
+              }
+              h1 {
+                font-family: sans-serif;
+                position: absolute;
+                top: 60%;
+                left: 25%;
+                transform: translate(-50%, -50%);
+                font-family:'Gill Sans MT';
+                color:rgb(255, 255, 255);
+                margin-left: 30px;
+              }
+              #t{
+                background-color: rgba(255, 255, 255,0.7);
+                border: none;
+                height: 40px;
+                width: 200px;
+                padding-left: 30px;
+                border-radius: 12px;
+                color: rgb(32,178,170);
+
+            }
+            #b {
+                font-family: sans-serif;
+                position: absolute;
+                top: 75%;
+                left: 25%;
+                transform: translate(-50%, -50%);
+                font-size: 15px;
+                font-family: sans-serif;
+                font-weight: bold;
+                color: rgb(32,178,170);
+                margin-left: 30px;
+                text-align: left;
+              }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar1">
+            <span><a class="active" href="web1.html">Home</a></span>
+        </nav>
+        <div class="container">
+            <img src="./img/ad7.jpg" width="1255" height="535">
+            <div>
+              <h1>Admin Login</h1>
+            </div>
+           <form name="reservationform" id="b" onsubmit="return validateForm()" method="post" action="#">
+             <br>
+             <br>
+               <input id="t" name="fname" type="text" placeholder="Username">
+            <input id="t" name="lname" type="text" placeholder="Password">
+        </div>
+        <script>
+            
+        </script>
+    </body>
+</html>

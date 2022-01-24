@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Reservation</title>
+    <style>
+        .navbar1{
+            font-family: sans-serif;
+              border-left: 10px solid rgb(255,215,0);
+              background-color: white;
+              overflow: hidden;
+              padding: 16px;
+        }
+        div.container {
+            position: relative;
+            text-align: center;
+          }
+          #b {
+            font-family: sans-serif;
+            position: absolute;
+            top: 38%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+            font-size: 15px;
+            font-family: sans-serif;
+            font-weight: bold;
+            color: rgb(255,215,0);
+            margin-left: 30px;
+            text-align: left;
+          }
+          h1 {
+            font-family: sans-serif;
+            position: absolute;
+            top: 5%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+            font-family:'Gill Sans MT';
+            color:rgb(255,215,0);
+            margin-left: 30px;
+          }
+          #t{
+              background-color: rgba(255, 255, 255, 0.2);
+              border: none;
+          height: 40px;
+          width: 200px;
+          padding-left: 30px;
+          border-radius: 12px;
+          }
+          #n{
+            background-color: rgba(255, 255, 255, 0.2);
+            border: none;
+        height: 40px;
+        width: 140px;
+        padding-left: 10px;
+        border-radius: 12px;
+        color: black;
+          }
+          #s{
+            background-color: rgba(255,215,0, 0.8);
+            border: none;
+        height: 40px;
+        width: 460px;
+        padding-left: 10px;
+        border-radius: 12px;
+        color: black;
+          }
+          ::placeholder{
+              color:rgb(255,215,0);
+          }
+             span {
+              float: left;
+              border-right:1px solid rgb(255,215,0);
+            }
+            span:last-child {
+              border-right: none;
+            } 
+            
+            span a {
+              color: black;
+              font-weight: bold;
+              padding: 14px 16px;
+              text-decoration: none;
+            }
+            
+            span a:hover {
+              color: rgb(255,215,0);
+            }
+            
+            nav.navbar1 a{
+              text-decoration: none;
+            }
+            body{
+                background-repeat: no-repeat;
+                background-size: cover;
+               }
+               footer{
+                width: 1232px;
+                margin-left: 50px;
+                vertical-align: bottom;
+                font-family: sans-serif;
+                font-size: 17px;
+                margin-left: 0;
+                padding: 10px 10px 10px 10px;
+                margin-bottom: 10px;
+                
+                color:black;
+            }
+            #copyright{
+              
+                text-align: center;
+                color: black;
+                font-family: Century Schoolbook;
+            }
+            hr{
+              background-color: rgb(255, 215, 0) ; 
+              width: 100%;
+               height: 2px;
+          }
+          #msg{
+            color:white;
+          }
+    </style>
+</head>
+<body>
+    <nav class="navbar1">
+        <span><a class="active" href="web1.html">Home</a></span>
+        <span><a href="destinations.html">Destinations</a></span>
+        <span><a href="About Us.html">About Us</a></span>
+    </nav>
+    <div class="container">
+        <img src="./img/beach5.jpg" width="1255" height="535">
+        <div>
+          <h1>Make Your Reservation!</h1>
+        </div>
+       <form name="reservationform" id="b" onsubmit="return validateForm()" method="post">
+         <br>
+         <br>
+           <input id="t" name="fname" type="text" placeholder="First Name">
+           <input id="t" name="lname" type="text" placeholder="Last Name">
+           <br>
+           <br>
+           <input id="t" name="email" type="text" placeholder="Email-id" >
+           <input id="t" name="pn" type="text" placeholder="Phone No." >
+           <br>
+           <br>
+           <input id="t" name="cin" type="text" placeholder="Check In" onfocus="(this.type='date')" onblur="(this.type='text')">
+           <input id="t" name="cout" type="text" placeholder="Check Out" onfocus="(this.type='date')" onblur="(this.type='text')">
+           
+           <br>
+           <br>
+           <input id="n" name="rooms" type="number" min="0" max="50" placeholder="No. of Rooms">
+           <input id="n" name="adults" type="number" min="0" max="50" placeholder="No. of Adults">
+           <input id="n" name="child" type="number" min="0" max="50" placeholder="No. of Children">
+            <br>
+            <br>
+            <div id="msg"></div>
+            <br>
+            <input id="s" type="submit" value="Book Now">
+       </form>
+       
+    </div>
+    <footer >
+      <div>
+          <center>Our website is designed to book hotels at your favourite destionation in India. </center>
+        </div>
+      <center><hr></center>
+      <div id="copyright">
+          @Copyright 2020 by the author and developer. All rights reserved.
+      </div>
+  </footer>
+</body>
+<script>
+function validateForm() {
+  var fname = document.forms["reservationform"]["fname"].value;
+  var lname = document.forms["reservationform"]["lname"].value;
+  var email = document.forms["reservationform"]["email"].value;
+  var pn = document.forms["reservationform"]["pn"].value;  
+  var cin = document.forms["reservationform"]["cin"].value;
+  var cout = document.forms["reservationform"]["cout"].value;
+  var rooms = document.forms["reservationform"]["rooms"].value;
+  var adults = document.forms["reservationform"]["adults"].value;
+
+  if (fname == "") {
+    document.getElementById('msg').innerHTML = "First name should not be empty";
+    return false;
+  }
+  if (lname == "") {
+    document.getElementById('msg').innerHTML = "Last name should not be empty";
+    return false;
+  }
+
+  var reg =  /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  if (!reg.test(email)) 
+  {
+    document.getElementById('msg').innerHTML = "Please enter valid email-id";
+    return false;
+  }
+
+  var num = /^[0-9]+$/;
+  if (!num.test(pn)) {
+    document.getElementById('msg').innerHTML = "Enter numeric values only";
+    return false;
+  }
+  else if(pn.length!=10){
+    document.getElementById('msg').innerHTML = "Phone Number should have 10 digits";
+    return false;
+  }
+
+  if (cin == "") {
+    document.getElementById('msg').innerHTML = "Select a checkin date";
+    return false;
+  }
+  if (cout == "") {
+    document.getElementById('msg').innerHTML = "Select a checkout date";
+    return false;
+  }
+  if (rooms == "") {
+    document.getElementById('msg').innerHTML = "Select No. of rooms";
+    return false;
+  }
+  if (adults == "") {
+    document.getElementById('msg').innerHTML = "Select No. of adults";
+    return false;
+  }
+}
+</script>
+</html>
